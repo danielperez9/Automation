@@ -1,6 +1,8 @@
 
+from copy import copy
 from datetime import *
 import os
+import copy
 import shutil
 import time
 
@@ -36,21 +38,24 @@ def filesort():
             
            
 right_directory()
-def renaming():
-    current_dir='D:\Resume'
-    new_directory=os.path.join(current_dir,new_directory_name)
-    
-    file_num=0
-    print (new_directory)
-    os.chdir(new_directory)
-    new_file_list=os.listdir(new_directory)
-    newFiles=list(filter(os.path.isfile,new_file_list))
-    for f in newFiles:
-        file_time=datetime.fromtimestamp(os.path.getctime(f))
-        file_time=file_time.strftime("%m/%d/%Y")
-        new_name = new_directory_name+"_"+str(file_num+1)+"_"+file_time+".pdf"
-        os.rename(f,new_name)
-        file_num+=1
-renaming()
 
+def rename_files():
+    old_dir=os.getcwd()
+    new_directory=os.path.join(old_dir,new_directory_name)
+    os.chdir(new_directory)
+    print (new_directory)
+    fila=os.listdir(new_directory)
+
+    number=0
+    for f in fila:
+        print(f)
+        filetime=datetime.fromtimestamp(os.path.getctime(f))
+        filetime=filetime.strftime("%m/%d/%Y")
+        filenames = new_directory_name +'_'+str(number+1)+'_'+filetime+".pdf"
+        os.rename(f,filenames)
+        number+=1
+
+
+
+rename_files()
         
