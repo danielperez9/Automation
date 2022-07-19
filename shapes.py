@@ -56,6 +56,7 @@ def rename_files():
         print(f)
         filetime=datetime.fromtimestamp(os.path.getctime(f))
         filetime=filetime.strftime("%m/%d/%Y")
+        #adding the date to the name gives an error
         filenames = new_directory_name +'_'+str(number+1)+'_'+filetime+".pdf"
         os.rename(f,filenames)
         number+=1
