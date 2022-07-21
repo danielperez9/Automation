@@ -39,6 +39,7 @@ def filesort():
             
            
 right_directory()
+
 # this function will rename the files that were coppied 
 # from the directory that was just made
 def rename_files():
@@ -56,6 +57,7 @@ def rename_files():
         number+=1
 
 rename_files()
+
 #accesing a differnt direcotry and editing a 
 # single line in multiple text files
 def edit_file():
@@ -71,6 +73,5 @@ def edit_file():
             data[1]="I need to get my story straight\n"
         with open(f,'w') as file:
             file.writelines(data)
-
-    print()
-
+            
+edit_file()
