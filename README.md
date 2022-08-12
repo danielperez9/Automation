@@ -1,4 +1,4 @@
-# Automation
+# File_Organizer
 automating activites of tedious things to do manually.
 This is a project that was sggested, I have scripted a way to locate several files by date, they will be copied over into a new directory (same location but new folder).
 The files will be renamed with the name( ou get to type in) of the folder and the date it was made.
