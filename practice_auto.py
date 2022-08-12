@@ -1,3 +1,7 @@
+#When the cript is run it will start and ask you to enter a date,
+# the date is the date in which the files have been made.
+# After it will ask you to enter a naem for the folder in which the files from that day will be placed in.
+#this code will edit the files, just copy them in the new directory and rename them
 from copy import copy
 from datetime import *
 import os
